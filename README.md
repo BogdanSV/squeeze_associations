@@ -37,8 +37,7 @@ end
 For making it globally available on all MongoMapper classes:
 
 ```ruby
-	MongoMapper::Document.plugin(SqueezeAssociations::MongoMapper::RecursiveAssociations) 
-end
+	MongoMapper::Document.plugin(SqueezeAssociations::MongoMapper::RecursiveAssociations)
 ```
 
 Then you can easily call it as:
@@ -57,7 +56,7 @@ This method has actually 2 optional parameters:
 2. To be determined ;)
 
 ## Be aware
-This is not fully tested, so issues could occur for various scenarios!!
+This is not fully tested, so unexpected issues could occur!!
 
 ## TODO
 
