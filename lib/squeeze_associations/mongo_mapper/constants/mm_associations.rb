@@ -1,14 +1,18 @@
+require 'mongo_mapper'
+
 module SqueezeAssociations
   module MongoMapper
-    module Associations
-      BELONGS_TO   = EXTENDED_MM_PATH::BelongsToAssociation
-      HAS_MANY     = EXTENDED_MM_PATH::ManyAssociation
-      HAS_ONE      = EXTENDED_MM_PATH::OneAssociation
-      EMBEDDED     = EXTENDED_MM_PATH::ManyEmbeddedProxy
-      POL_EMBEDDED = EXTENDED_MM_PATH::ManyEmbeddedPolymorphicProxy
+    module AssociationsConstants
+      include ActiveSupport::Inflector
 
-      private
-      EXTENDED_MM_PATH = MongoMapper::Plugins::Associations
+      EXTENDED_MM_PATH = 'MongoMapper::Plugins::Associations'
+
+      BELONGS_TO   = "#{EXTENDED_MM_PATH}::BelongsToAssociation".constantize
+      HAS_MANY     = "#{EXTENDED_MM_PATH}::ManyAssociation".constantize
+      HAS_ONE      = "#{EXTENDED_MM_PATH}::OneAssociation".constantize
+      EMBEDDED     = "#{EXTENDED_MM_PATH}::ManyEmbeddedProxy".constantize
+      POL_EMBEDDED = "#{EXTENDED_MM_PATH}::ManyEmbeddedPolymorphicProxy".constantize
+
     end
   end
 end

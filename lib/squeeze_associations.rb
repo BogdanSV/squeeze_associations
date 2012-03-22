@@ -1,5 +1,7 @@
-require "squeeze_associations/version"
-require "squeeze_associations/mongo_mapper/recursive_associations"
+require 'squeeze_associations/version'
+require 'squeeze_associations/mongo_mapper/recursive_associations'
 
-module SqueezeAssociations; end
-Sa = SqueezeAssociations
+module SqueezeAssociations
+  autoload :Constants, 'squeeze_associations/mongo_mapper/constants/mm_associations'
+  autoload :RecursiveDocuments, 'squeeze_associations/mongo_mapper/recursive_associations'
+end

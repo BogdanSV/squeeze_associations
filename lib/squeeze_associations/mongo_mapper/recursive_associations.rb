@@ -1,11 +1,11 @@
-require "lib/squeeze_associations/mongo_mapper/constants/constans"
+require File.expand_path("../constants/mm_associations", __FILE__)
 
 module SqueezeAssociations
   module MongoMapper
     module RecursiveAssociations
       extend ActiveSupport::Concern
 
-      CONSTANTS = Sa::MongoMapper::Associations
+      CONSTANTS = SqueezeAssociations::MongoMapper::AssociationsConstants
 
       module ClassMethods
       end

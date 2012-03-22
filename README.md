@@ -1,6 +1,7 @@
-# SqueezeAssociations
+# Squeeze Associations
 
-TODO: Write a gem description
+Adds one method used to retrieve an array of whole mongo documents or object ids 
+                          of the associated documents giving an initial ODM object
 
 ## Installation
 
@@ -17,8 +18,23 @@ Or install it yourself as:
     $ gem install squeeze_associations
 
 ## Usage
+NB! It only works with MongoMappers for now; will try to adapt it for Mongoid and maybe ActiveRecord in the future versions.
 
-TODO: Write usage instructions here
+	require 'squeeze_associations'
+
+For making the *all_associated_documents* method available to one single class instances:
+
+	class YourClass
+	  include SqueezeAssociations::MongoMapper::RecursiveAssociations
+	end
+	OR
+	class YourOtherClass
+	  plugin SqueezeAssociations::MongoMapper::RecursiveAssociations	
+	end
+
+For making it globally available on all MongoMapper classes:
+
+	MongoMapper::Document.plugin(SqueezeAssociations::MongoMapper::RecursiveAssociations) 
 
 ## Contributing
 

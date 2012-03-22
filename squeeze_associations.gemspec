@@ -5,7 +5,7 @@ Gem::Specification.new do |gem|
   gem.authors       = ["Bogdan Barla"]
   gem.email         = ["bogdan.barla@softvisioninc.eu"]
   gem.description   = %q{Gets all documents/ids associated with one document}
-  gem.summary       = %q{Simple wrapper used to retrieve an array of mongo documents or object ids 
+  gem.summary       = %q{Adds one method used to retrieve an array of whole mongo documents or object ids 
                           of the associated documents giving an initial ODM object}
   gem.homepage      = ""
 
