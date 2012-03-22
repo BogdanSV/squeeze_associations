@@ -36,6 +36,10 @@ For making it globally available on all MongoMapper classes:
 
 	MongoMapper::Document.plugin(SqueezeAssociations::MongoMapper::RecursiveAssociations) 
 
+## TODO
+
+Unit tests to be added 
+
 ## Contributing
 
 1. Fork it
