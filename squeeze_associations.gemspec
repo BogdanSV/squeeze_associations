@@ -13,7 +13,8 @@ Gem::Specification.new do |gem|
 
   # DEPENDENCIES
   gem.add_dependency 'mongo_mapper', "0.11.0"
-  gem.add_development_dependency "rspec", "2.9.0"
+
+  gem.add_development_dependency "rspec",           "2.9.0"
 
   gem.files         = `git ls-files`.split($\)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
